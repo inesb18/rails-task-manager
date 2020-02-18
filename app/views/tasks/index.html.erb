@@ -1,0 +1,17 @@
+<h2> Here are your tasks </h2>
+<% if @tasks.empty? %>
+  <p>No task!</p>
+<% else %>
+  <ul>
+    <% @tasks.each do |task| %>
+      <li>
+        <% if task.completed %>
+          <i class="far fa-check-circle"></i>
+        <% else %>
+          <i class="far fa-circle"></i>
+        <% end %>
+        <%= task.title %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
