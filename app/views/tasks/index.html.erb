@@ -12,7 +12,8 @@
         <% end %>
         <%= link_to task.title, task_path(task) %>
         <i class="fas fa-circle" style="font-size: 8px"></i>
-        <%= link_to task_path(task), method: :delete do%>
+        <%= link_to task_path(task), method: :delete,
+        data: {confirm: "Delete #{task.title}?"} do%>
          <i class="fas fa-trash"></i>
         <% end %>
       </li>
