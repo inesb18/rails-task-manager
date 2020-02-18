@@ -23,7 +23,7 @@ class TasksController < ApplicationController
 
   def update
     task = Task.find(params[:id])
-    task.update(task_params)
+    task.update(task_params_with_completed)
     redirect_to task_path(task)
   end
 
@@ -37,5 +37,9 @@ class TasksController < ApplicationController
 
   def task_params
     params.require(:task).permit(:title, :details)
+  end
+
+  def task_params_with_completed
+    params.require(:task).permit(:title, :details, :completed)
   end
 end
