@@ -9,5 +9,12 @@
     <%= f.text_area :details, class: 'form-control' %>
   </div>
 
+  <% unless @task.new_record? %>
+    <div class="form-group custom-control custom-checkbox">
+      <%= f.check_box :completed, class: 'form-control inline custom-control-input' %>
+      <%= f.label :completed, class: "custom-control-label"%>
+    </div>
+  <% end %>
+
   <%= f.submit class: 'btn btn-primary' %>
 <% end %>
