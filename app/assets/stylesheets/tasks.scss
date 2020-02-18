@@ -4,8 +4,22 @@
 
 body {
   font-family: 'Noto Sans', sans-serif;
+  margin: 16px 16px;
 }
 
 li {
   list-style: none;
+}
+
+.details {
+  padding: 16px 16px;
+  margin: 16px auto;
+  background: #DCDCE1;
+  border-radius: 5px;
+  border: 2px solid #CACAD2;
+  display: flex;
+  // align-items: center;
+  p {
+    margin-bottom: 0;
+  }
 }

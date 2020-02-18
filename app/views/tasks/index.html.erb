@@ -10,7 +10,7 @@
         <% else %>
           <i class="far fa-circle"></i>
         <% end %>
-        <%= task.title %>
+        <%= link_to task.title, task_path(task) %>
       </li>
     <% end %>
   </ul>
