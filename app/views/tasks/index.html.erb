@@ -1,4 +1,4 @@
-<h2> Here are your tasks </h2>
+<h2> My tasks </h2>
 <% if @tasks.empty? %>
   <p>No task!</p>
 <% else %>
@@ -15,3 +15,12 @@
     <% end %>
   </ul>
 <% end %>
+
+<hr>
+
+
+<%= link_to new_task_path do%>
+  <i class="fas fa-plus mr-1"></i>Add a new task
+<% end %>
+
+
